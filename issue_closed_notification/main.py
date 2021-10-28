@@ -4,7 +4,7 @@ import requests
 import os
 
 def getWebhookURL():
-    url=os.environ.get("INPUT_DISCORD_WEBHOOK_URL")
+    url=os.environ.get("INPUT_DISCORD-WEBHOOK-URL")
     if url is None or url == "None" or url == "":
         raise ValueError("Webhook URL not provided.")
     return url
