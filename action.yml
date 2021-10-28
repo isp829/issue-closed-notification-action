@@ -1,0 +1,9 @@
+name: 'Issue Closed Notification'
+description: 'Posts a message to Discord channel for issue close events'
+inputs:
+  discord-webhook-url:
+    description: 'Discord Webhook URL'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
