@@ -1,5 +1,5 @@
 import random
-import MessageTemplates
+from issue_closed_notification import MessageTemplates
 
 def getRandomTemplate():
     return random.choice(MessageTemplates.messageTemplates)
