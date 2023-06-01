@@ -11,9 +11,9 @@ def getWebhookURL():
 
 def getPayload():
     print("Getting Issue Details")
-    assignee,issue_number,issue_url,repo_name = EventProcessor.getIssueDetails()
+    issue_number,issue_url,repo_name = EventProcessor.getIssueDetails()
     print("Generating Message")
-    message = Messages.getMessage(assignee,repo_name,issue_number,issue_url)
+    message = Messages.getMessage(repo_name,issue_number,issue_url)
     payload = {"content" : message}
     return payload
 
