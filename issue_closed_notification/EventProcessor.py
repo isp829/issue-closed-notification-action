@@ -13,12 +13,6 @@ def getIssueData():
 def getIssueURL(issue_data):
     return issue_data['html_url']
 
-def getIssueAssignee(issue_data):
-    assignee=issue_data['assignee']
-    if assignee == None or assignee == "None":
-        raise ValueError("Issue has not been assigned to anyone")
-    return assignee['login']
-
 def getIssueNumber(issue_data):
     return str(issue_data['number'])
 
@@ -27,4 +21,4 @@ def getReopName():
 
 def getIssueDetails():
     issue_data=getIssueData()
-    return getIssueAssignee(issue_data),getIssueNumber(issue_data),getIssueURL(issue_data),getReopName()
+    return getIssueNumber(issue_data),getIssueURL(issue_data),getReopName()
